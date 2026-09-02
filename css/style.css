@@ -75,147 +75,80 @@ section{
     margin:auto;
 }
 
-/*==========================
+/*=========================
+        LAYOUT
+==========================*/
+
+.layout{
+
+    display:flex;
+
+}
+
+/*=========================
         SIDEBAR
 ==========================*/
 
 .sidebar{
 
-    position: fixed;
+    position:fixed;
 
-    top: 76px;
+    top:80px;                 /* debajo del navbar */
 
-    left: 0;
+    left:0;
 
-    width: 300px;
+    width:300px;
 
-    height: calc(100vh - 76px);
+    height:calc(100vh - 140px); /* 80 navbar + 60 footer */
 
-    background: #ffffff;
+    overflow-y:auto;
 
-    border-right: 1px solid #e5e7eb;
+    background:#fff;
 
-    padding: 30px 20px;
+    border-right:1px solid #E2E8F0;
 
-    overflow-y: auto;
-
-    box-shadow: 5px 0 20px rgba(0,0,0,.05);
-
-}
-
-.sidebar-title{
-
-    font-weight:700;
-
-    margin-bottom:30px;
-
-}
-
-.sidebar-menu{
-
-    list-style:none;
-
-    padding:0;
-
-}
-
-.sidebar-menu li{
-
-    margin-bottom:10px;
-
-}
-
-.sidebar-menu a{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    padding:15px 18px;
-
-    border-radius:15px;
-
-    color:#374151;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.sidebar-menu a i{
-
-    font-size:22px;
-
-}
-
-.sidebar-menu a:hover{
-
-    background:#0d6efd;
-
-    color:white;
-
-    transform:translateX(8px);
-
-}
-
-.sidebar-menu a.active{
-
-    background:#0d6efd;
-
-    color:white;
-
-    box-shadow:0 10px 20px rgba(13,110,253,.35);
-
-}
-
-.sidebar-card{
-
-    margin-top:40px;
-
-    background:#f8f9fa;
-
-    border-radius:20px;
+    box-shadow:5px 0 20px rgba(0,0,0,.05);
 
     padding:25px;
 
-    text-align:center;
-
-    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    z-index:1000;
 
 }
 
-.sidebar-card i{
+/* Scroll elegante */
 
-    font-size:45px;
+.sidebar::-webkit-scrollbar{
 
-    color:#0d6efd;
-
-    margin-bottom:15px;
+    width:8px;
 
 }
 
-.sidebar-card h5{
+.sidebar::-webkit-scrollbar-thumb{
 
-    font-weight:700;
+    background:#D4AF37;
+
+    border-radius:10px;
+
+}
+
+.sidebar::-webkit-scrollbar-track{
+
+    background:#F8FAFC;
 
 }
 
-.sidebar-card p{
-
-    color:#6b7280;
-
-}
+/*=========================
+        CONTENIDO
+==========================*/
 
 .contenido{
 
     margin-left:320px;
 
+    width:calc(100% - 320px);
+
     padding:40px;
+
 }
 
 .nav-link.active{
@@ -284,215 +217,101 @@ section{
         CALENDARIO
 =====================================*/
 
-#calendar{
+.calendar-card{
 
     background:#FFFFFF;
-
-    padding:20px;
 
     border:4px solid #0F172A;
 
     border-radius:20px;
 
-    box-shadow:0 15px 35px rgba(15,23,42,.15);
+    padding:20px;
+
+    box-shadow:0 15px 35px rgba(15,23,42,.12);
 
 }
 
-/*==============================
-        FULLCALENDAR
-==============================*/
+.booking-card{
 
-.fc{
+    background:#0F172A;
 
-    background: white;
+    color:white;
+
+    padding:35px;
 
     border-radius:20px;
 
-    padding:20px;
+    position:sticky;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
+    top:120px;
 
-}
-
-/*=====================================
-        BARRA SUPERIOR
-=====================================*/
-
-.fc .fc-toolbar{
-
-    background:#0F172A;
-
-    color:#FFFFFF;
-
-    padding:18px;
-
-    border-radius:15px;
-
-    margin-bottom:20px;
+    box-shadow:0 15px 35px rgba(15,23,42,.2);
 
 }
 
-/* Título */
+.booking-card h3{
 
-.fc-toolbar-title{
-
-    color:#FFFFFF;
-
-    font-weight:700;
+    color:#D4AF37;
 
 }
 
-/*=====================================
-        BOTONES
-=====================================*/
+.booking-card .form-control,
+.booking-card .form-select{
 
-.fc .fc-button{
+    border-radius:10px;
 
-    background:#D4AF37 !important;
-
-    color:#0F172A !important;
-
-    border:none !important;
-
-    border-radius:10px !important;
-
-    padding:8px 15px !important;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-.fc .fc-button:hover{
-
-    background:#B8860B !important;
-
-    color:#FFFFFF !important;
-
-}
-
-.fc .fc-button-active{
-
-    background:#FFFFFF !important;
-
-    color:#0F172A !important;
-
-}
-
-/*=====================================
-        ENCABEZADO DE DÍAS
-=====================================*/
-
-.fc-col-header-cell{
-
-    background:#0F172A;
+    border:none;
 
     padding:12px;
 
 }
 
-.fc-col-header-cell a{
+.btn-gold{
 
-    color:#D4AF37 !important;
-
-    text-decoration:none;
-
-    font-weight:700;
-
-}
-
-/*=====================================
-        CUADRÍCULA
-=====================================*/
-
-.fc-theme-standard td,
-.fc-theme-standard th{
-
-    border:1px solid #E2E8F0;
-
-}
-
-/*=====================================
-        DÍAS
-=====================================*/
-
-.fc-daygrid-day-number{
+    background:#D4AF37;
 
     color:#0F172A;
 
-    font-weight:700;
+    font-weight:bold;
 
-    padding:10px;
-
-}
-
-/* Día actual */
-
-.fc-day-today{
-
-    background:#FFF8E1 !important;
-
-}
-
-.fc-day-today .fc-daygrid-day-number{
-
-    color:#D4AF37 !important;
-
-}
-
-/* Hover */
-
-.fc-daygrid-day:hover{
-
-    background:#F8FAFC;
-
-    cursor:pointer;
-
-}
-
-/*=====================================
-        EVENTOS
-=====================================*/
-
-.fc-event{
-
-    background:#0F172A !important;
-
-    color:#FFFFFF !important;
-
-    border:none !important;
-
-    border-left:5px solid #D4AF37 !important;
-
-    border-radius:8px;
-
-    padding:4px 8px;
-
-    font-weight:600;
-
-}
-
-/*=====================================
-        ENLACES
-=====================================*/
-
-.fc a{
-
-    text-decoration:none;
-
-}
-
-/*=====================================
-        BORDE GENERAL
-=====================================*/
-
-.fc-scrollgrid{
-
-    border:2px solid #0F172A !important;
+    border:none;
 
     border-radius:12px;
 
-    overflow:hidden;
+    padding:14px;
+
+    transition:.3s;
+
+}
+
+.btn-gold:hover{
+
+    background:#B8860B;
+
+    color:white;
+
+}
+
+/*==================================
+        TARJETAS DE SERVICIOS
+==================================*/
+
+.service-img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    transition:.4s;
+
+}
+
+.card:hover .service-img{
+
+    transform:scale(1.05);
 
 }

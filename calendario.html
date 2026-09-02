@@ -81,36 +81,115 @@
     
     </nav>
 
-    <div class="container py-5">
+    <!-- Calendario -->
+    <section class="container-fluid py-5">
 
-        <h1>Calendario</h1>
-
-        <section class="container py-5">
-
-            <div class="row justify-content-center">
+        <div class="container">
     
-                <div class="col-lg-10">
+            <div class="text-center mb-5">
     
-                    <div class="card border-0 shadow-lg rounded-4">
+                <h1 class="fw-bold">Agenda tu sesión</h1>
     
-                        <div class="card-header bg-dark text-white rounded-top-4 p-4">
+                <p class="text-secondary">
     
-                            <h2 class="mb-0">
-                                <i class="bi bi-calendar-check"></i>
-                                Agenda tu sesión
-                            </h2>
+                    Selecciona una fecha y completa tu solicitud de reserva.
     
-                            <small>
-                                Selecciona una fecha disponible.
-                            </small>
+                </p>
     
-                        </div>
+            </div>
     
-                        <div>
-                            <!-- Calendario -->
-                            <div id="calendar"></div>
+            <div class="row g-4">
     
-                        </div>
+                <!-- Calendario -->
+    
+                <div class="col-lg-8">
+    
+                    <div class="calendar-card">
+    
+                        <div id="calendar"></div>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- Panel lateral -->
+    
+                <div class="col-lg-4">
+    
+                    <div class="booking-card">
+    
+                        <h3 class="mb-4">
+    
+                            <i class="bi bi-camera-fill"></i>
+    
+                            Reserva
+    
+                        </h3>
+    
+                        <label class="form-label">
+    
+                            Tipo de sesión
+    
+                        </label>
+    
+                        <select class="form-select mb-3">
+    
+                            <option>Boda</option>
+    
+                            <option>Graduación</option>
+    
+                            <option>Pareja</option>
+    
+                            <option>Familiar</option>
+    
+                            <option>Infantil</option>
+    
+                            <option>Evento</option>
+    
+                        </select>
+    
+                        <label class="form-label">
+    
+                            Horario
+    
+                        </label>
+    
+                        <select class="form-select mb-3">
+    
+                            <option>09:00 AM</option>
+    
+                            <option>10:00 AM</option>
+    
+                            <option>11:00 AM</option>
+    
+                            <option>12:00 PM</option>
+    
+                            <option>03:00 PM</option>
+    
+                            <option>04:00 PM</option>
+    
+                        </select>
+    
+                        <input
+                            type="text"
+                            class="form-control mb-3"
+                            placeholder="Nombre completo">
+    
+                        <input
+                            type="email"
+                            class="form-control mb-3"
+                            placeholder="Correo electrónico">
+    
+                        <input
+                            type="tel"
+                            class="form-control mb-4"
+                            placeholder="Teléfono">
+    
+                        <button class="btn btn-gold w-100">
+    
+                            Reservar sesión
+    
+                        </button>
     
                     </div>
     
@@ -118,9 +197,9 @@
     
             </div>
     
-        </section>
-
-    </div>
+        </div>
+    
+    </section>
 
     <!-- Barra inferior -->
     <footer class="footer-bar">
