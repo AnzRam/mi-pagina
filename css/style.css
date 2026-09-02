@@ -2,6 +2,7 @@ body{
     font-family: 'Segoe UI', sans-serif;
     overflow-x:hidden;
     padding-bottom: 70px;
+    padding-top: 80px;
 }
 
 .navbar{
@@ -172,4 +173,14 @@ section{
 
     font-size: .95rem;
 
+}
+
+.navbar{
+    transition: all .3s ease;
+}
+
+.navbar.scrolled{
+    background-color: rgba(255,255,255,.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
 }
