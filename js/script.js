@@ -40,3 +40,59 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const calendarEl = document.getElementById('calendar');
+
+    if(calendarEl){
+
+        const calendar = new FullCalendar.Calendar(calendarEl, {
+
+            initialView: 'dayGridMonth',
+
+            locale: 'es',
+
+            height: "auto",
+
+            selectable: true,
+
+            nowIndicator: true,
+
+            headerToolbar: {
+
+                left: 'prev,next today',
+
+                center: 'title',
+
+                right: 'dayGridMonth,timeGridWeek'
+
+            },
+
+            events: [
+
+                {
+                    title: "Sesión Boda",
+                    start: "2026-09-10"
+                },
+
+                {
+                    title: "Graduación",
+                    start: "2026-09-15"
+                }
+
+            ],
+
+            dateClick: function(info){
+
+                alert("Seleccionaste: " + info.dateStr);
+
+            }
+
+        });
+
+        calendar.render();
+
+    }
+
+});
