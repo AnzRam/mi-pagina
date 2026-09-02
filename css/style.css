@@ -291,3 +291,122 @@ section{
     box-shadow:0 10px 30px rgba(0,0,0,.1);
 
 }
+
+/*==============================
+        FULLCALENDAR
+==============================*/
+
+.fc{
+
+    background: white;
+
+    border-radius:20px;
+
+    padding:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+/* Barra superior */
+
+.fc .fc-toolbar{
+
+    background:#0F172A;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+}
+
+/* Botones */
+
+.fc .fc-button{
+
+    background:#1E3A8A !important;
+
+    border:none !important;
+
+    border-radius:10px !important;
+
+    padding:8px 15px !important;
+
+    transition:.3s;
+
+}
+
+.fc .fc-button:hover{
+
+    background:#2563EB !important;
+
+}
+
+.fc .fc-button-active{
+
+    background:#3B82F6 !important;
+
+}
+
+/* Días */
+
+.fc-theme-standard td,
+.fc-theme-standard th{
+
+    border:1px solid #E5E7EB;
+
+}
+
+.fc-col-header-cell{
+
+    background:#1E3A8A;
+
+    color:white;
+
+    padding:12px;
+
+}
+
+.fc-daygrid-day-number{
+
+    color:#0F172A;
+
+    font-weight:600;
+
+}
+
+/* Día de hoy */
+
+.fc-day-today{
+
+    background:#DBEAFE !important;
+
+}
+
+/* Eventos */
+
+.fc-event{
+
+    background:#1E3A8A !important;
+
+    border:none !important;
+
+    border-radius:8px;
+
+    padding:3px;
+
+}
+
+/* Hover */
+
+.fc-daygrid-day:hover{
+
+    background:#EFF6FF;
+
+    cursor:pointer;
+
+}
