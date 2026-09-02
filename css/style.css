@@ -1,6 +1,7 @@
 body{
     font-family: 'Segoe UI', sans-serif;
     overflow-x:hidden;
+    padding-bottom: 70px;
 }
 
 .navbar{
@@ -132,5 +133,43 @@ section{
     pointer-events:none;
 
     cursor:default;
+
+}
+
+/* Barra fija inferior */
+
+.footer-bar{
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    background: #111827;
+
+    color: white;
+
+    padding: 12px 0;
+
+    z-index: 1030;
+
+    box-shadow: 0 -3px 10px rgba(0,0,0,.2);
+
+}
+
+.footer-bar i{
+
+    color: #FFC107;
+
+    margin-right: 8px;
+
+}
+
+.footer-bar span{
+
+    font-size: .95rem;
 
 }
