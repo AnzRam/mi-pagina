@@ -280,15 +280,21 @@ section{
     box-shadow: 0 5px 15px rgba(0,0,0,.15);
 }
 
+/*=====================================
+        CALENDARIO
+=====================================*/
+
 #calendar{
 
-    background:white;
+    background:#FFFFFF;
 
     padding:20px;
 
+    border:4px solid #0F172A;
+
     border-radius:20px;
 
-    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    box-shadow:0 15px 35px rgba(15,23,42,.15);
 
 }
 
@@ -308,15 +314,17 @@ section{
 
 }
 
-/* Barra superior */
+/*=====================================
+        BARRA SUPERIOR
+=====================================*/
 
 .fc .fc-toolbar{
 
     background:#0F172A;
 
-    color:white;
+    color:#FFFFFF;
 
-    padding:15px;
+    padding:18px;
 
     border-radius:15px;
 
@@ -324,11 +332,25 @@ section{
 
 }
 
-/* Botones */
+/* Título */
+
+.fc-toolbar-title{
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+}
+
+/*=====================================
+        BOTONES
+=====================================*/
 
 .fc .fc-button{
 
-    background:#1E3A8A !important;
+    background:#D4AF37 !important;
+
+    color:#0F172A !important;
 
     border:none !important;
 
@@ -336,68 +358,86 @@ section{
 
     padding:8px 15px !important;
 
+    font-weight:600;
+
     transition:.3s;
 
 }
 
 .fc .fc-button:hover{
 
-    background:#2563EB !important;
+    background:#B8860B !important;
+
+    color:#FFFFFF !important;
 
 }
 
 .fc .fc-button-active{
 
-    background:#3B82F6 !important;
+    background:#FFFFFF !important;
+
+    color:#0F172A !important;
 
 }
 
-/* Días */
-
-.fc-theme-standard td,
-.fc-theme-standard th{
-
-    border:1px solid #E5E7EB;
-
-}
+/*=====================================
+        ENCABEZADO DE DÍAS
+=====================================*/
 
 .fc-col-header-cell{
 
-    background:#1E3A8A;
-
-    color:white;
+    background:#0F172A;
 
     padding:12px;
 
 }
 
+.fc-col-header-cell a{
+
+    color:#D4AF37 !important;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+}
+
+/*=====================================
+        CUADRÍCULA
+=====================================*/
+
+.fc-theme-standard td,
+.fc-theme-standard th{
+
+    border:1px solid #E2E8F0;
+
+}
+
+/*=====================================
+        DÍAS
+=====================================*/
+
 .fc-daygrid-day-number{
 
     color:#0F172A;
 
-    font-weight:600;
+    font-weight:700;
+
+    padding:10px;
 
 }
 
-/* Día de hoy */
+/* Día actual */
 
 .fc-day-today{
 
-    background:#DBEAFE !important;
+    background:#FFF8E1 !important;
 
 }
 
-/* Eventos */
+.fc-day-today .fc-daygrid-day-number{
 
-.fc-event{
-
-    background:#1E3A8A !important;
-
-    border:none !important;
-
-    border-radius:8px;
-
-    padding:3px;
+    color:#D4AF37 !important;
 
 }
 
@@ -405,8 +445,54 @@ section{
 
 .fc-daygrid-day:hover{
 
-    background:#EFF6FF;
+    background:#F8FAFC;
 
     cursor:pointer;
+
+}
+
+/*=====================================
+        EVENTOS
+=====================================*/
+
+.fc-event{
+
+    background:#0F172A !important;
+
+    color:#FFFFFF !important;
+
+    border:none !important;
+
+    border-left:5px solid #D4AF37 !important;
+
+    border-radius:8px;
+
+    padding:4px 8px;
+
+    font-weight:600;
+
+}
+
+/*=====================================
+        ENLACES
+=====================================*/
+
+.fc a{
+
+    text-decoration:none;
+
+}
+
+/*=====================================
+        BORDE GENERAL
+=====================================*/
+
+.fc-scrollgrid{
+
+    border:2px solid #0F172A !important;
+
+    border-radius:12px;
+
+    overflow:hidden;
 
 }
