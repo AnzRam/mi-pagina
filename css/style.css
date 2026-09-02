@@ -46,3 +46,11 @@ body{
 
     padding:10px 24px;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    scroll-margin-top:90px;
+}
